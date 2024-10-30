@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata-Kata Harian Alfred</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .thumbnail {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .recommendations, .firmantuhan, .calendar {
+            margin-top: 20px;
+        }
+
+        #message {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-video">
+        <video autoplay muted loop>
+            <source src="https://drive.google.com/uc?id=1D5ZaaP7OYjjhPhXvKQx-23umwFeAYCzX" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <div class="content">
+        <h1>Kata-Kata Harian Alfred, 29 Oktober 2024</h1>
+        <p>Ini kata-kataku hari ini, pekerjaanmu mungkin tidak seksi dan tampak biasa saja di mata orang namun kalau kamu semangat bekerja, kamu bisa mencapai banyak hal dalam hidup. TUHAN bilang setialah dalam perkara sederhana maka TUHAN akan memberikanmu perkara yang lebih besar. Setia itu dimulai dari hal kecil, setia juga berarti kamu mampu bertanggung jawab dengan apa yang dipercayakan kemudian jika suatu hari nanti TUHAN ijinkan kamu memimpin maka sudah waktunya hatimu diperlebar kapasitasnya, lebih sabar lagi, lebih lemah lembut lagi sama orang, lebih lambat berbicara dan banyak mendengar kemudian karena kamu adalah pemimpinnya kamu tidak dapat menyenangkan semua pihak. Pilihlah selalu untuk mementingkan kepentingan banyak orang, bahkan kepentingan pribadimu juga terkadang harus kamu kesampingkan namun percayalah upah seorang pemimpin dihadapan TUHAN itu pasti berbeda karena tanggung jawabmu juga berbeda. Kata-kataku kepada diriku sendiri, ingatlah selalu jujur dan setia dalam perkara sederhana, jika TUHAN percayakan perkara besar maka hati kita juga jangan berubah. Akhirnya biarlah hidupmu dan hidupku memuliakan Nama TUHAN Yesus, selama-lamanya. Amin</p>
+        
+        <button id="toggleMessage">Ketuk untuk Membuka Pesan</button>
+        <div id="message" class="hidden">
+            <p>Pesan dari Alfred</p>
+            <button id="closeMessage">Ketuk untuk Menutup</button>
+        </div>
+        
+        <div class="recommendations">
+            <h2>Rekomendasi Video Khotbah</h2>
+            <a href="https://youtube.com/your-video-link" target="_blank">
+                <img src="https://drive.google.com/uc?id=YOUR_YOUTUBE_THUMBNAIL_FILE_ID" alt="Video Khotbah" class="thumbnail">
+            </a>
+            <button onclick="playSong()">Play Lagu</button>
+        </div>
+        
+        <div class="firmantuhan">
+            <h2>Firman Tuhan</h2>
+            <img src="https://drive.google.com/uc?id=YOUR_FIRMANTUHAN_FILE_ID" alt="Firman Tuhan" class="thumbnail">
+        </div>
+        
+        <div class="calendar">
+            <h2>Kalender Oktober 2024</h2>
+            <div id="currentDate">29</div>
+            <button id="previousDay">Hari Sebelumnya</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('toggleMessage').onclick = function() {
+            var messageDiv = document.getElementById('message');
+            messageDiv.classList.toggle('hidden');
+        };
+
+        document.getElementById('closeMessage').onclick = function() {
+            var messageDiv = document.getElementById('message');
+            messageDiv.classList.add('hidden');
+        };
+
+        function playSong() {
+            var audio = new Audio('https://drive.google.com/uc?id=YOUR_AUDIO_FILE_ID');
+            audio.play();
+        }
+
+        document.getElementById('previousDay').onclick = function() {
+            alert('Tampilkan pesan hari sebelumnya');
+        };
+    </script>
+</body>
+</html>
